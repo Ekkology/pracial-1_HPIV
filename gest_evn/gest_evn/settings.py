@@ -52,10 +52,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'gest_evn.urls'
 
+
+STATICFILES_DIRS = ['/home/ekkology/ssd_2/Documentos_U/Django_universidad/pracial-1_HPIV/web/static']
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/ekkology/ssd_2/Documentos_U/Django_universidad/pracial-1_HPIV/web'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
