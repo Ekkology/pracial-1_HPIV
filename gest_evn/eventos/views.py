@@ -1,2 +1,5 @@
-def (request): 
-        return render(request,"video_imagen2.html")
+from django.shortcuts import render
+
+
+def lista_home(request):
+        return render(request,"lista_eventos.html")
