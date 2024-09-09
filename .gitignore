@@ -1,2 +1,4 @@
 
 *.pyc
+
+gest_evn/db.sqlite3
