@@ -2,3 +2,5 @@
 *.pyc
 
 gest_evn/db.sqlite3
+
+gest_evn/eventos/migrations/
