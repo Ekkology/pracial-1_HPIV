@@ -55,6 +55,8 @@ ROOT_URLCONF = 'gest_evn.urls'
 
 STATICFILES_DIRS = ['/home/ekkology/ssd_2/Documentos_U/Django_universidad/pracial-1_HPIV/web/static']
 
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'lista_eventos'
 
 TEMPLATES = [
     {
