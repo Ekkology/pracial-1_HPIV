@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <h2>Iniciar Sesión</h2>
+    
+    <!-- Muestra un mensaje de error si las credenciales no son correctas -->
+    {% if form.errors %}
+        <p style="color: red;">Por favor, corrige los siguientes errores:</p>
+    {% endif %}
+    
+    <form method="post">
+        {% csrf_token %}
+        <!-- Genera los campos del formulario de inicio de sesión -->
+        {{ form.as_p }}
+        <button type="submit">Iniciar sesión</button>
+    </form>
+
+    <!-- Link a la página de registro, si lo tienes configurado -->
+    <p>¿No tienes una cuenta? <a href="{% url 'signup' %}">Regístrate aquí</a></p>
+</body>
+</html>
