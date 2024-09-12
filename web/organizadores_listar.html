@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Añade un organizador</title>
+</head>
+<body>
+    <h1>Lista de Organizadores</h1>
+    <ul>
+        {% for organizador in organizadores %}
+            <li>{{ organizador.nombre }} - {{ organizador.correo_electronico }}</li>
+        {% empty %}
+            <li>No hay organizadores disponibles.</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{% url 'organizador-create' %}">Crear nuevo organizador</a>
+</body>
+</html>
+
