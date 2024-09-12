@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h2>Regístrate</h2>
+
+    <!-- Muestra errores si los hay -->
+    {% if form.errors %}
+        <p style="color: red;">Por favor, corrige los siguientes errores:</p>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <!-- Genera los campos del formulario de registro -->
+        {{ form.as_p }}
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Inicia sesión aquí</a></p>
+</body>
+</html>
